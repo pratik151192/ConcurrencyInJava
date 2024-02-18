@@ -1,6 +1,6 @@
 package concurrency.bathroom;
 
-public class BarberDriver {
+public class BathroomDriver {
 
     public static void main(String... args) throws InterruptedException {
         final Bathroom bathroom = new Bathroom();

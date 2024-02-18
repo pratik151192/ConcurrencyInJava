@@ -8,21 +8,6 @@ import java.util.concurrent.locks.ReentrantLock;
  * V1 with single concurrency.barber and multiple customers
  */
 public class BarberShopV2 {
-
-    // concurrency.barber shop
-
-    // 1 concurrency.barber chair (for the customer) and a concurrency.barber
-    // waiting room with n number of chairs
-
-    // a customer shows up
-    // - if concurrency.barber chair and all chairs are occupied, customer leaves
-    // - if a chair is available to sit or wait, then the customer will wait
-    // - if a concurrency.barber doesn't have anyone to service, he/she goes to sleep
-    // - if a concurrency.barber is asleep and customer walks in, they'd wake up the concurrency.barber
-
-    // addCustomerToWaitList(Customer c) -> concurrency.barber shop/receptionist
-    // serveCustomer(Customer c) -> concurrency.barber
-
     private int numChairs;
 
     private final LinkedBlockingQueue<Customer> customers = new LinkedBlockingQueue<>();
